@@ -39,7 +39,6 @@ then
 				chmod 0777 $install_path/hcd
 				chmod 0777 $history_path
 				echo "alias hcd='source ${install_path}/hcd'" >> ${bash_file}
-				source ${bash_file}
 				echo "Hcd written by hxe in santachi!"
 				echo "Hcd has been installed successfully!"
 				echo "Thanks for using!"
@@ -56,7 +55,6 @@ else
 	if [ "$1" = "-u" ]
 	then
 		sed -i "/alias hcd='source/d" ${bash_file}
-		source ${bash_file}
 		rm -rf $history_path
 		rm -f $install_path/hcd
 	fi
